@@ -12,9 +12,10 @@ Plugin 'tpope/vim-rails'
 Plugin 'fatih/vim-go'
 Plugin 'nsf/gocode', {'rtp': 'vim/'}
 call vundle#end()
-filetype plugin indent on
+filetype plugin on
 
 syntax enable
+set smartindent
 set mouse=a
 set expandtab
 set tabstop=2
