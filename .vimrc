@@ -7,10 +7,13 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'scrooloose/syntastic'
 Plugin 'solarnz/thrift.vim'
 Plugin 'tpope/vim-rails'
 Plugin 'fatih/vim-go'
 Plugin 'nsf/gocode', {'rtp': 'vim/'}
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'rodjek/vim-puppet'
 call vundle#end()
 filetype plugin on
 
@@ -32,3 +35,17 @@ let g:go_fmt_fail_silently = 1
 let g:go_fmt_command = "goimports"
 let g:go_fmt_autosave = 0
 
+"set statusline+=%#warningmsg#
+"set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 0
+let g:syntastic_auto_loc_list = 0
+let g:syntastic_error_symbol = "✗"
+let g:syntastic_warning_symbol = "⚠"
+let g:syntastic_enable_balloons = 1
+let g:ycm_show_diagnostics_ui = 0
+let g:syntastic_enable_signs = 1
+let g:syntastic_enable_python_checkers = 1
+let g:syntastic_python_checkers = ['flake8']
+let g:syntastic_python_flake8_args='--ignore=F401'
