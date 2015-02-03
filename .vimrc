@@ -29,6 +29,9 @@ set whichwrap+=<,>,h,l,[,]
 colorscheme torte
 set colorcolumn=81
 highlight ColorColumn ctermbg=233
+" Hilight trailing whitespace
+:highlight TrailWhitespace ctermbg=18
+:match TrailWhitespace /\s\+$\| \+\ze\t/
 
 " go stuff
 let g:go_fmt_fail_silently = 1
