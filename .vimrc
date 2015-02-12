@@ -21,6 +21,10 @@ filetype plugin on
 syntax enable
 set smartindent
 set mouse=a
+if has('mouse_sgr')
+  set ttymouse=sgr
+endif
+
 set expandtab
 set tabstop=2
 set shiftwidth=2
