@@ -14,6 +14,7 @@ Plugin 'fatih/vim-go'
 Plugin 'nsf/gocode', {'rtp': 'vim/'}
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'rodjek/vim-puppet'
+Plugin 'godlygeek/tabular'
 call vundle#end()
 filetype plugin on
 
@@ -52,3 +53,5 @@ let g:syntastic_enable_signs = 1
 let g:syntastic_enable_python_checkers = 1
 let g:syntastic_python_checkers = ['flake8']
 let g:syntastic_python_flake8_args='--ignore=F401'
+let g:syntastic_puppet_checkers = ['puppetlint']
+let g:syntastic_puppet_puppetlint_args='--no-80chars-check'
