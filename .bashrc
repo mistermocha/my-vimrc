@@ -26,6 +26,7 @@ export PATH="/usr/local/heroku/bin:$PATH"
 export GOPATH=$HOME/go
 export PATH=$GOPATH/bin:$PATH
 export PATH=$PATH:/usr/local/mysql/bin
+export PKG_CONFIG_PATH=/System/Library/Frameworks/Python.framework/Versions/2.7/lib/pkgconfig/
 
 alias ls="ls $LSFLAGS"
 alias g='git'
