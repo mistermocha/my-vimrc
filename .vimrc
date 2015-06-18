@@ -38,6 +38,9 @@ highlight ColorColumn ctermbg=233
 :highlight TrailWhitespace ctermbg=18
 :match TrailWhitespace /\s\+$\| \+\ze\t/
 
+" Vagrant syntax
+au BufRead,BufNewFile Vagrantfile set filetype=ruby
+
 " go stuff
 let g:go_fmt_fail_silently = 1
 let g:go_fmt_command = "goimports"
