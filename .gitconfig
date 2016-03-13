@@ -1,5 +1,5 @@
 [user]
-	email = bweber@pinterest.com
+	email = bweber@twitter.com
 	name = Brian Weber
 [push]
 	default = simple
@@ -13,3 +13,7 @@
   nb = checkout -b
 [core]
 	editor = vim
+[diff]
+	renames = true
+[http]
+	postBuffer = 524288000
