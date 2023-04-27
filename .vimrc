@@ -14,12 +14,8 @@ Plugin 'fatih/vim-go'
 Plugin 'nsf/gocode', {'rtp': 'vim/'}
 Plugin 'rodjek/vim-puppet'
 Plugin 'godlygeek/tabular'
-<<<<<<< HEAD
 Plugin 'aklt/plantuml-syntax'
-=======
 Plugin 'derekwyatt/vim-scala'
-Plugin 'kevints/vim-aurora-syntax'
->>>>>>> 8c9e3c58e2ffbdbca28c14e15f7ae06080d318c8
 call vundle#end()
 filetype plugin on
 
@@ -36,15 +32,9 @@ set shiftwidth=2
 set number
 set backspace=2
 set whichwrap+=<,>,h,l,[,]
-<<<<<<< HEAD
 colorscheme industry
-set colorcolumn=81
-highlight ColorColumn ctermbg=DarkMagenta ctermfg=White
-=======
-colorscheme torte
 set colorcolumn=101
 highlight ColorColumn ctermbg=233
->>>>>>> 8c9e3c58e2ffbdbca28c14e15f7ae06080d318c8
 " Hilight trailing whitespace
 :highlight TrailWhitespace ctermbg=18
 :match TrailWhitespace /\s\+$\| \+\ze\t/
