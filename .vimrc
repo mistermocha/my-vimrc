@@ -6,15 +6,15 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
-Plugin 'Valloric/YouCompleteMe'
+"Plugin 'Valloric/YouCompleteMe'
 Plugin 'scrooloose/syntastic'
 Plugin 'solarnz/thrift.vim'
 Plugin 'tpope/vim-rails'
 Plugin 'fatih/vim-go'
 Plugin 'nsf/gocode', {'rtp': 'vim/'}
-Plugin 'vim-ruby/vim-ruby'
 Plugin 'rodjek/vim-puppet'
 Plugin 'godlygeek/tabular'
+Plugin 'aklt/plantuml-syntax'
 call vundle#end()
 filetype plugin on
 
@@ -31,9 +31,9 @@ set shiftwidth=2
 set number
 set backspace=2
 set whichwrap+=<,>,h,l,[,]
-colorscheme torte
+colorscheme industry
 set colorcolumn=81
-highlight ColorColumn ctermbg=233
+highlight ColorColumn ctermbg=DarkMagenta ctermfg=White
 " Hilight trailing whitespace
 :highlight TrailWhitespace ctermbg=18
 :match TrailWhitespace /\s\+$\| \+\ze\t/
