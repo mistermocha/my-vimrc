@@ -1,17 +1,7 @@
-if [ -f /Library/Developer/CommandLineTools/usr/share/git-core/git-prompt.sh ]; then
-  source /Library/Developer/CommandLineTools/usr/share/git-core/git-prompt.sh
-fi
-
 if [ -z "$SSH_AGENT_PID" ] ; then
   eval `ssh-agent -s`
   ssh-add
 fi
-
-export GITAWAREPROMPT=~/.bash/git-aware-prompt
-source $GITAWAREPROMPT/main.sh
-
-_br=`hg branch 2> /dev/null`
-export hg_branch="($_br)"
 
 OS=`uname`
 if [ $OS = "Linux" ]; then
@@ -23,14 +13,6 @@ elif [ $OS = "Darwin" ]; then
   UHCOLOR=5
   LSFLAGS='-G'
 fi
-
-PS1="\[$(tput bold)\]\[$(tput setaf $BRACKETCOLOR)\][\[$(tput setaf $UHCOLOR)\]\u@\h \[$(tput setaf 2)\]\w \[$(tput setaf 6)\]\$hg_branch\$git_branch\[$(tput setaf $BRACKETCOLOR)\]]\\$ \[$(tput sgr0)\]"
-export PS1 
-
-export GITHUB_TOKEN=c31c0245b87532e10f621f1e6bc921b67976bee2
-
-export CARINA_USERNAME=mistermocha@gmail.com
-export CARINA_APIKEY=6e1c6584d3ba4eb29c30951b78ba571f
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
@@ -49,5 +31,9 @@ alias grb='git fetch && git rebase master'
 alias gf='git fetch'
 alias gco='git checkout'
 #alias tmux="TERM=screen-256color-bce tmux"
+
+alias k="kubectl"
+alias kg="kubectl get"
+alias ky="kubectl get -o yaml"
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
