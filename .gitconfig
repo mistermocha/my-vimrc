@@ -13,3 +13,7 @@
   nb = checkout -b
 [core]
 	editor = vim
+[diff]
+	renames = true
+[http]
+	postBuffer = 524288000

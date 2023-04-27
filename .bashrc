@@ -2,6 +2,11 @@ if [ -f /Library/Developer/CommandLineTools/usr/share/git-core/git-prompt.sh ]; 
   source /Library/Developer/CommandLineTools/usr/share/git-core/git-prompt.sh
 fi
 
+if [ -z "$SSH_AGENT_PID" ] ; then
+  eval `ssh-agent -s`
+  ssh-add
+fi
+
 export GITAWAREPROMPT=~/.bash/git-aware-prompt
 source $GITAWAREPROMPT/main.sh
 
@@ -40,11 +45,15 @@ alias ls="ls $LSFLAGS"
 alias g='git'
 alias gbr='git branch'
 alias gnb='git checkout -b'
-alias grb='git pull --rebase'
+alias grb='git fetch && git rebase master'
 alias gf='git fetch'
 alias gco='git checkout'
+<<<<<<< HEAD
 alias apython='/Users/brianweber/anaconda2/bin/python'
 alias jupyter='/Users/brianweber/anaconda2/bin/jupyter'
+=======
+alias vsql='/Users/bweber/scratch/opt/vertica/bin/vsql'
+>>>>>>> 8c9e3c58e2ffbdbca28c14e15f7ae06080d318c8
 #alias tmux="TERM=screen-256color-bce tmux"
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
